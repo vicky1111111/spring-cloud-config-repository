@@ -3,10 +3,10 @@ server:
 spring:  
   application:
     name: system
-  datasource:    
-    username: xlink_cloud
-    password: xlink_cloud
-    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+  datasource:
+    username: xlink01
+    password: xlink01
+    url: jdbc:oracle:thin:@10.34.12.110:1521:xlink
     driver-class-name: oracle.jdbc.driver.OracleDriver
     validation-query: select 1 from durl
     druid:
@@ -49,4 +49,4 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds:60000
-word: hello world111111
+word: hello world
