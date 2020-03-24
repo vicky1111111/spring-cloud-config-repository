@@ -1,0 +1,51 @@
+server:
+  port: 8092
+spring:  
+  application:
+    name: system
+  datasource:
+    username: xlink01
+    password: xlink01
+    url: jdbc:oracle:thin:@10.34.12.110:1521:xlink
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    validation-query: select 1 from durl
+    druid:
+      max-active: 20
+      initial-size: 2
+      max-wait: 60000
+      min-idle: 2
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 30000
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000    
+mybatis:
+  config-location: classpath:mapper/mybatis.cfg.xml
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.zjft.atmp.system.entities
+management:
+  endpoints:
+    web:
+      exposure:
+        include: env,health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka/
+  instance:
+    prefer-ip-address: true
+logging:
+  config: classpath:${spring.application.name}-logback.xml
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds:60000
