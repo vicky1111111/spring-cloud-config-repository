@@ -2,7 +2,7 @@ server:
   port: 8092
 spring:  
   application:
-    name: system
+    name: regiter
   datasource:
     username: xlink01
     password: xlink01
