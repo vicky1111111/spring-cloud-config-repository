@@ -49,4 +49,4 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds:60000
-word: hello world
+word: hello world111111
