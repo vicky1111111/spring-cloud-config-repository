@@ -1,0 +1,5 @@
+demo:
+  title: "config-bep-dev测试"
+spring:  
+  application:
+    name: config-bep-dev

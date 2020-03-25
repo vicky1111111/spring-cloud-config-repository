@@ -1,5 +1,0 @@
-demo:
-  title: "application-dev"
-spring:  
-  application:
-    name: application-dev

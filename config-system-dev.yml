@@ -2,7 +2,7 @@ server:
   port: 8092
 spring:  
   application:
-    name: system
+    name: config-system-dev
   datasource:
     username: xlink01
     password: xlink01
@@ -49,3 +49,4 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds:60000
+word: config-bep-prod测试
