@@ -49,4 +49,4 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds:60000
-word: config-bep-prod测试
+word: config-system-dev
