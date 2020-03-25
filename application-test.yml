@@ -1,2 +1,5 @@
 demo:
-  title: "test env title 2018"
+  title: "application-test"
+spring:  
+  application:
+    name: application-test

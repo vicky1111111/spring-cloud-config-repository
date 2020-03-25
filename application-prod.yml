@@ -1,2 +1,5 @@
 demo:
-  title: "prod env title"
+  title: "application-prod"
+spring:  
+  application:
+    name: application-prod
