@@ -2,7 +2,7 @@ server:
   port: 8092
 spring:  
   application:
-    name: config-system-dev
+    name: system
   datasource:
     username: xlink01
     password: xlink01
