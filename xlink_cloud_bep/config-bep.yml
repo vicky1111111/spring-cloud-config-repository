@@ -1,0 +1,19 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: bep
+  aop:
+    proxy-target-class: true
+    auto: true
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka/
+  instance:
+    prefer-ip-address: true
+logging:
+  config: classpath:${spring.application.name}-logback.xml
+

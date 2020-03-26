@@ -1,5 +1,0 @@
-demo:
-  title: "config-system-test"
-spring:  
-  application:
-    name: config-system-test

@@ -1,0 +1,25 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: register
+  output:
+    ansi:
+      enabled: always
+eureka:
+  instance:
+    hostname: 127.0.0.1
+#    lease-renewal-interval-in-seconds: 10
+#    lease-expiration-duration-in-seconds: 30
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    use-read-only-response-cache: false
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 10000
+logging:
+  config: classpath:${spring.application.name}-logback.xml
+

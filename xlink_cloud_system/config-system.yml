@@ -2,11 +2,11 @@ server:
   port: 8092
 spring:  
   application:
-    name: config-bep-prod
-  datasource:
+    name: system
+  datasource: 
     username: xlink01
     password: xlink01
-    url: jdbc:oracle:thin:@10.34.12.110:1521:xlink
+    url: jdbc:oracle:thin:@10.34.12.110:1521:xlink   
     driver-class-name: oracle.jdbc.driver.OracleDriver
     validation-query: select 1 from durl
     druid:
@@ -21,7 +21,6 @@ spring:
       test-while-idle: true
       connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000    
 mybatis:
-  config-location: classpath:mapper/mybatis.cfg.xml
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.zjft.atmp.system.entities
 management:
@@ -49,4 +48,3 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds:60000
-word: config-bep-prod测试
